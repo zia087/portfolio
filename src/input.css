@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .text-stroke{
+        -webkit-text-stroke: 1px white;
+    }
+    .letter-space{
+        letter-spacing: 5px;
+    }
+.anim{
+  animation:anima 4s linear infinite;
+}
+
+@keyframes anima{
+ 0%{
+  transform: translateX(0);
+ }
+50%{
+  transform: translateX(40px);
+ }
+75%{
+  transform: translateX(40px);
+ }
+100%{
+  transform: translateX(0);
+ }
+}
+
+.animate-vote {
+  animation: vote 10s ease-in-out infinite;
+}
+@keyframes vote {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+/* reveal animation */
+.reveal{
+  animation: reveal 3s ease-out forwards; 
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}}
